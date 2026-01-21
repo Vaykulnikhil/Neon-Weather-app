@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☁ Neon Weather App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="glass-card">
+      <h1 class="title">☁ Neon Weather</h1>
+
+      <img src="https://cdn-icons-png.flaticon.com/512/1146/1146869.png" alt="Clouds" class="weather-image">
+      
+      <form method="POST">
+        <div class="search-box">
+          <input type="text" name="city" id="cityInput" placeholder="Enter City Name..." required>
+          <button type="submit">Search</button>
+        </div>
+      </form>
+     
+      <!-- jinja -->
+      {% if weather %}
+      <div class="output">
+        <h2>{{ weather.city }}</h2>
+        <img src="{{ weather.icon }}" alt="Weather icon">
+        <p class="temp">{{ weather.temp }}°C</p>
+        <p class="desc">{{ weather.desc }}</p>
+        <div class="details">
+          <p>💧 Humidity: {{ weather.humidity }}%</p>
+          <p>🌬️ Wind Speed: {{ weather.wind }} m/s</p>
+        </div>
+      </div>
+      {% elif error %}
+        <p style="color:#ff9999;">{{ error }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <footer>⚡ © 2025 Neon Weather ✨ All Rights Reserved</footer>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #06162b, #12345c);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+/* Wrapper center */
+.wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Glass effect card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  width: 320px;
+}
+
+/* Title styling */
+.title {
+  font-size: 28px;
+  color: #a8eaff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+}
+
+/* Floating weather image */
+.weather-image {
+  width: 100px;
+  margin-bottom: 20px;
+  animation: floatCloud 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px #00f5ff);
+}
+
+/* Floating animation */
+@keyframes floatCloud {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Search box styling */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.search-box input::placeholder {
+  color: #ccc;
+}
+
+.search-box button {
+  background: linear-gradient(90deg, #00f5ff, #00c6ff);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover animation */
+.search-box button:hover {
+  color: #fff;
+  box-shadow: 0 0 20px #00f5ff, 0 0 40px #00f5ff;
+  background: linear-gradient(90deg, #00c6ff, #0099ff);
+  transform: scale(1.05);
+}
+
+/* Button neon pulse animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 5px #00f5ff, 0 0 10px #00f5ff;
+  }
+  50% {
+    box-shadow: 0 0 15px #00f5ff, 0 0 30px #00f5ff;
+  }
+  100% {
+    box-shadow: 0 0 5px #00f5ff, 0 0 10px #00f5ff;
+  }
+}
+
+/* Add continuous glow */
+.search-box button {
+  animation: pulseGlow 2s infinite;
+}
+
+
+/* Weather output */
+.output img {
+  width: 70px;
+  filter: drop-shadow(0 0 10px #00f5ff);
+}
+
+.temp {
+  font-size: 26px;
+  font-weight: 600;
+  color: #00f5ff;
+}
+
+.desc {
+  font-size: 18px;
+  color: #cdefff;
+  margin-bottom: 10px;
+}
+
+.details {
+  color: #b9e4ff;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #9ecbff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
