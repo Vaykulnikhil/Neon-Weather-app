@@ -19,6 +19,7 @@
       align-items: center;
       min-height: 100vh;
       color: #fff;
+      flex-direction: column;
     }
 
     /* Wrapper */
@@ -28,6 +29,7 @@
       align-items: center;
       padding: 20px;
       width: 100%;
+      flex: 1;
     }
 
     /* Glass card */
@@ -139,11 +141,17 @@
 
     /* Footer */
     footer {
-      margin-top: 30px;
+      width: 100%;
+      padding: 15px 0;
       text-align: center;
       font-size: 14px;
       color: #9ecbff;
       text-shadow: 0 0 6px #00f5ff;
+      border-top: 1px solid rgba(0, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.05);
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -176,5 +184,10 @@
 
     </div>
   </div>
+
+  <footer>
+    ⚡ © 2025 Neon Weather ✨ All Rights Reserved
+  </footer>
+
 </body>
 </html>
