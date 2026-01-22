@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Neon Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    /* Body & background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Wrapper center */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Title */
+.title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px #00fff7;
+}
+
+/* Paragraphs */
+.glass-card p {
+  line-height: 1.6;
+  color: #cdefff;
+}
+
+/* Details */
+.details p {
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+/* Neon hover effect for any links/buttons inside glass card */
+.glass-card a, .glass-card button {
+  color: #00fff7;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.glass-card a:hover, .glass-card button:hover {
+  text-shadow: 0 0 8px #00fff7;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="glass-card">
+      <h1 class="title">🌤 About Neon Weather</h1>
+
+      <p style="color:#cdefff; line-height:1.6; font-size:15px;">
+        Neon Weather App is a modern weather application built using
+        <b>Python Flask</b> and the <b>OpenWeather API</b>.
+      </p>
+
+      <div class="details" style="margin-top:15px;">
+        <p>🌡 Real-time Temperature</p>
+        <p>☁ Live Weather Condition</p>
+        <p>💧 Humidity Level</p>
+        <p>🌬 Wind Speed</p>
+      </div>
+
+      <p style="margin-top:15px; color:#b9e4ff; font-size:14px;">
+        This project is designed to practice Flask, APIs, and modern UI
+        using glassmorphism & neon effects.
+      </p>
+
+      <p style="margin-top:10px; color:#9ecbff; font-size:13px;">
+        Developed by <b>Nikhil</b>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
