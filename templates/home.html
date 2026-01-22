@@ -7,9 +7,19 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
 </head>
 <body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+  <ul class="nav-list">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+  </ul>
+</nav>
+
   <div class="wrapper">
     <div class="glass-card">
-      <h1 class="title">☁ Neon Weather</h1>
+      <h1 class="title">☁ Neon Weather App</h1>
 
       <img src="https://cdn-icons-png.flaticon.com/512/1146/1146869.png" alt="Clouds" class="weather-image">
       
@@ -20,7 +30,6 @@
         </div>
       </form>
      
-      <!-- jinja -->
       {% if weather %}
       <div class="output">
         <h2>{{ weather.city }}</h2>
